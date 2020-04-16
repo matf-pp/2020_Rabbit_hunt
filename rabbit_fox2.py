@@ -1,8 +1,60 @@
 import pygame
 import random
 import numpy
+pygame.init()
 
+def step(surface):
+    global bStart, bRun, bStop, bStep, bReplay, coords,f,r
+    bStart.pressed = False
+    while bStep.pressed:
+        bStep.pressed = False
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+        f.move()
+        r.move()
+        refreshWindow(surface, coords)
 
+def pause(surface):
+    global bStart, bRun, bStop, bStep, bReplay, coords
+    bStop.pressed = True
+    bStart.pressed = False
+    while bStop.pressed:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+        refreshWindow(surface, coords)
+        if bStart.pressed == True:
+            bStop.pressed = False
+
+class button(object):
+    def __init__(self,position, activeColor, inactiveColor, text):
+        self.position = position
+        self.activeColor = activeColor
+        self.inactiveColor = inactiveColor
+        self.text = text
+        self.pressed = False
+
+    def draw(self,surface):
+        cur = pygame.mouse.get_pos()
+        click = pygame.mouse.get_pressed()
+        if self.position[0] < cur[0] < self.position[0]+55 and self.position[1] < cur[1] < self.position[1]+25:
+            pygame.draw.rect(surface,self.inactiveColor, (self.position[0], self.position[1],55,25))
+            if click[0]==1:
+                if self.text == "Start":
+                    self.pressed = True
+                elif self.text == "Stop":
+                    pause(surface)
+                    self.pressed = False
+                elif self.text == "Step":
+                    self.pressed = True
+                    step(surface)
+        else:
+            pygame.draw.rect(surface,self.activeColor, (self.position[0], self.position[1],55,25))
+        textSurface, textRect = text_objects (self.text, (0,0,0))
+        textRect.center = (self.position[0]+55//2, self.position[1]+25//2)
+        surface.blit(textSurface, textRect)
+    
 class bush(object):
     rows = 25
     width = 500
@@ -17,6 +69,11 @@ class bush(object):
         j = self.position[1]
         pygame.draw.rect(surface, self.color, (i * dis + 1, j * dis + 1, dis - 2, dis - 2))
 
+
+def text_objects(text,color):
+    font = pygame.font.SysFont(None, 22)
+    textSurface = font.render(text, True, color)
+    return textSurface, textSurface.get_rect()
 
 def isCollision(cord1):
     global position_matrix
@@ -160,28 +217,41 @@ def spawnBush(surface, coords):
 
 
 def refreshWindow(surface, coords):
-    global rows, width, f, r
+    global rows, width, f, r, bStart, bRun, bStop, bStep, bReplay
     surface.fill((0,0,0))
     drawGrid(width, rows, surface)
     spawnBush(surface, coords)
     f.draw(surface, True)
     r.draw(surface, True)
+    bStart.draw(surface)
+    bRun.draw(surface)
+    bStop.draw(surface)
+    bStep.draw(surface)
+    bReplay.draw(surface)
     pygame.display.update()
 
 
+
+
+
 def main():
-    global rows, width, f, r, position_matrix
+    global coords,rows, width, f, r, position_matrix, bStart, bRun, bStop, bStep, bReplay
     rows = 25
     width = 500
     position_matrix = numpy.zeros((rows+1, rows+1))
-    field = pygame.display.set_mode((width, 543))
+    field = pygame.display.set_mode((width, 560))
     game = True
     f = fox((10, 10), (255, 51, 0))
     r = rabbit((12, 13), (255, 255, 255))
+    bStart = button((200,520), (210,210,210), (160,160,160), "Start")
+    bRun = button((260,520), (210,210,210), (160,160,160), "Run")
+    bStop = button((320,520), (210,210,210), (160,160,160), "Stop")
+    bStep = button((380,520), (210,210,210), (160,160,160), "Step")
+    bReplay = button((440,520), (210,210,210), (160,160,160), "Replay")
     clock = pygame.time.Clock()
     coords = bushCoord(50)
     while game:
-        pygame.time.delay(50)
+        pygame.time.delay(100)
         clock.tick(10)
         if (f.position == r.position) or r.turn == 10000:
             pygame.quit()
