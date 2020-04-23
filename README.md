@@ -1,4 +1,18 @@
 # Rabbit hunt
 
 Kratak opis igre
-_ _ _ _ _ _ _ _ _
+================
+
+Blaaa blaaaa blaaaaaaaaaaaaaaaaaaaaaaa
+--------------------------------------
+fldskjjjjjjjjjjf ojdfsllllllllllllllllllllllllllllllllllllllllllllll
+fjdlsssssssssssssssssssssssssssssssssj fdsljjj fdjkjjjdk skdsjkdj
+
+Jezici i tehnologije korišćene u izradi
+=======================================
+
+Pokretanje
+==========
+
+Autori
+======
