@@ -13,8 +13,8 @@ Pokretanje
 
 Autori
 -------
-1.Jana Vučković
+* Jana Vučković
 
-2.Marko Popović
+* Marko Popović
 
-3.Katarina Branković
+* Katarina Branković
