@@ -9,6 +9,14 @@ def distance(curr_position, target_position):
     return math.sqrt((target_position[0] - curr_position[0])*(target_position[0] - curr_position[0])
          + (target_position[1] - curr_position[1])*(target_position[1] - curr_position[1]))
 
+def manhattan_distance(pair1, pair2):
+    return abs(pair1[0] - pair2[0]) + abs(pair1[1] - pair2[1]) 
+
+def distance(curr_position, target_position):
+    return math.sqrt((target_position[0] - curr_position[0])*(target_position[0] - curr_position[0])
+         + (target_position[1] - curr_position[1])*(target_position[1] - curr_position[1]))
+
+
 # Heuristika za algoritam a*, vraca euklidsko rastojanje
 def h_cost(curr_position, target_position):
     return distance(curr_position, target_position)
@@ -202,8 +210,7 @@ def is_visible_from(x, y, x0, y0, map, visited):
 
 #pomocna funkcija    
 def f(x):
-    x = abs(x)
-    if x > 12:
+    if x > 12 or x < 0:
         return 0
-    funct = {0: 0, 1:0, 2:0, 3:0, 4:1, 5:2, 6:5, 7:9, 8:15, 9:20, 10:28, 11:30, 12:45}
+    funct = {0: 0, 1:0, 2:0, 3:0, 4:1, 5:2, 6:5, 7:9, 8:15, 9:20, 10:30, 11:50, 12:80}
     return funct[x]
