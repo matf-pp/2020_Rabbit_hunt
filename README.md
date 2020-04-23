@@ -1,3 +1,4 @@
-# 2020_Rabbit_hunt
+# Rabbit hunt
 
-Lisica juri zeca
+Kratak opis igre
+_ _ _ _ _ _ _ _ _
