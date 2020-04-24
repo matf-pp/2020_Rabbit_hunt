@@ -14,11 +14,33 @@ Lisica juri zeca po polju koje sadrži žbunje koje  može da blokira pogled lis
 <p align="center">
  Lisica je narandžasti trouglić dok je zec beli kvadratić
 </p>
- 
+
+
+
+ Naš zadatak je bio da napravimo što pametnijeg zeca odnosno da smislimo algoritam pomoću kog će zec što češće pobediti u igri. 
    
+Klikom na odgovarajuće dugme, moguće je:
+
+
+* Pokrenuti animaciju
+
+* Pauzirati animaciju
+
+* Pratiti kretanje lisice i zeca korak po korak
+
+* Vratiti se korak u nazad
+
+Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću.
+
+Kada se igrica završi pritiskom na (r) igrica se ponovo pokreće a na (q) se prekida sa radom.
+
+
 
 Jezici i tehnologije korišćene u izradi
 ---------------------------------------
+Program je napisan u jeziku Python3.
+
+Pored moudla obradjenih fakultetskim kursevima upotrebljivani su i moduli: pygame, heapq, collections.
 
 Pokretanje
 ----------
