@@ -22,15 +22,17 @@ Lisica juri zeca po polju koje sadrži žbunje koje  može da blokira pogled lis
 Klikom na odgovarajuće dugme, moguće je:
 
 
-* Pokrenuti animaciju
+* ![](images/run.png)  Pokrenuti animaciju
 
-* Pauzirati animaciju
+* ![](images/stop.png)  Pauzirati animaciju
 
-* Pratiti kretanje lisice i zeca korak po korak
+* ![](images/step.png)  Pratiti kretanje lisice i zeca korak po korak
 
-* Vratiti se korak u nazad
+* ![](images/reset.png)  Započeti igricu od početka
 
-Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću.
+* ![](images/replay.png)  Vratiti se korak u nazad
+
+   Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću.
 
 Kada se igrica završi pritiskom na (r) igrica se ponovo pokreće a na (q) se prekida sa radom.
 
