@@ -8,7 +8,7 @@ Lisica juri zeca po polju koje sadrži žbunje koje  može da blokira pogled lis
 
 
 <p align="center">
-  <img width="498" height="607"  src= 1.png>
+  <img width="498" height="607"  src= images/1.png>
 </p>
 
 <p align="center">
