@@ -421,12 +421,13 @@ def main():
         if bReset.pressed():
             main()
         if bReplay.pressed() and number_of_steps >= 1:
+            number_of_steps -= 1
+            pygame.time.delay(100)
             f.position = f.prev_steps[-1]
             f.prev_steps = f.prev_steps[:-1]
             r.position = r.prev_steps[-1]
             r.prev_steps = r.prev_steps[:-1]
             r.fox_last_seen = r.fox_last_seen[:-1]
-            number_of_steps -= 1
 
         refreshWindow(field, bush_coords)
 
