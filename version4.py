@@ -8,7 +8,7 @@ pygame.init()
 
 
 def step(surface):
-    global f, r, turn_on_fox, number_of_steps
+    global f, r, number_of_steps
     number_of_steps += 1
     f.move()
     if f.position == r.position:
@@ -348,7 +348,7 @@ def set_table():
 
 
 def main():
-    global good_bushes, s, bush_coords, rows, width, f, r, position_matrix, bReplay, bRun, bStop, bStep, bReplay, buttons, turn_on_fox, number_of_steps
+    global good_bushes, s, bush_coords, rows, width, f, r, position_matrix, bReplay, bRun, bStop, bStep, bReplay, buttons, number_of_steps
     rows = 25
     width = 500
     position_matrix = numpy.zeros((rows + 1, rows + 1))
@@ -363,7 +363,6 @@ def main():
     s = scroll((60, 525), (150, 525), (180, 180, 180), (130, 130, 130))
     clock = pygame.time.Clock()
     set_table()
-    turn_on_fox = True
     running = False
     number_of_steps = 0
     winner = None
