@@ -3,7 +3,7 @@
 Kratak opis igre
 -----------------
 
-Lisica juri zeca po polju koje sadrži žbunje koje  može da blokira pogled lisici do zeca i obrnuto. Lisica pokušava da uhvati zeca dok zec pokušava da joj pobegne. Ukoliko lisica uhvati zeca pojede ga i pobeđuje. Ako zec ne bude pojeden u 100 poteza, on pobeđuje. Lisica i zec su na početku postavljeni na unapred zadato rastojanje bilo gde na polju. Na primer: 
+Lisica juri zeca po terenu koji sadrži žbunje koje može da blokira pogled lisici do zeca i obrnuto. Lisica pokušava da uhvati zeca dok zec pokušava da joj pobegne. Ukoliko lisica uhvati zeca, pobeđuje. Ako zec ne bude uhvaćen u 100 poteza, on pobeđuje. Lisica i zec su na početku postavljeni na unapred zadato rastojanje bilo gde na polju. Na primer: 
 
 
 
@@ -22,15 +22,15 @@ Lisica juri zeca po polju koje sadrži žbunje koje  može da blokira pogled lis
 Klikom na odgovarajuće dugme, moguće je:
 
 
-* ![](images/run.png)  Pokrenuti animaciju
+* ![](images/run.png)  Pokrenuti animaciju.
 
-* ![](images/stop.png)  Pauzirati animaciju
+* ![](images/stop.png)  Pauzirati animaciju.
 
-* ![](images/step.png)  Pratiti kretanje lisice i zeca korak po korak
+* ![](images/step.png)  Pratiti kretanje lisice i zeca korak po korak. Jednim klikom, i zec i lisica prave po jedan korak.
 
-* ![](images/reset.png)  Započeti igricu od početka
+* ![](images/reset.png)  Započeti igricu od početka, odnosno na teren opet postaviti žbunje, lisicu i zeca.
 
-* ![](images/replay.png)  Vratiti se korak u nazad
+* ![](images/replay.png)  Vratiti se korak u nazad. Vraćanjem u nazad, igra se ne mora nužno odvijati isto.
 
    Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću.
 
@@ -49,9 +49,12 @@ Pokretanje
 
 Autori
 -------
+
+* Katarina Branković
+
 * Jana Vučković
+    jana.vuck@gmail.com
 
 * Marko Popović
 
-* Katarina Branković
 
