@@ -47,14 +47,18 @@ Pored moudla obradjenih fakultetskim kursevima upotrebljivani su i moduli: pygam
 Pokretanje
 ----------
 
+
+
 Autori
 -------
 
 * Katarina Branković
+    katarinab70@gmail.com
 
 * Jana Vučković
     jana.vuck@gmail.com
 
 * Marko Popović
+    popsgljb@gmail.com
 
 
