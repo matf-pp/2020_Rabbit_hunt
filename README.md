@@ -3,12 +3,12 @@
 Kratak opis igre
 -----------------
 
-Lisica juri zeca po terenu koji sadrži žbunje koje može da blokira pogled lisici do zeca i obrnuto. Lisica pokušava da uhvati zeca dok zec pokušava da joj pobegne. Ukoliko lisica uhvati zeca, pobeđuje. Ako zec ne bude uhvaćen u 100 poteza, on pobeđuje. Lisica i zec su na početku postavljeni na unapred zadato rastojanje bilo gde na polju. Na primer: 
+Lisica juri zeca po terenu koji sadrži žbunje koje može da blokira pogled lisici do zeca i obrnuto. Lisica pokušava da uhvati zeca dok zec pokušava da joj pobegne. Ukoliko lisica uhvati zeca, pobeđuje. Ako zec ne bude uhvaćen u 200 poteza, on pobeđuje. Lisica i zec su na početku postavljeni na unapred zadato rastojanje bilo gde na polju. Na primer: 
 
 
 
 <p align="center">
-  <img width="498" height="607"  src= images/1.png>
+  <img width="498" height="607"  src= images/pocetna.png>
 </p>
 
 <p align="center">
@@ -32,10 +32,10 @@ Klikom na odgovarajuće dugme, moguće je:
 
 * ![](images/replay.png)  Vratiti se korak u nazad. Vraćanjem u nazad, igra se ne mora nužno odvijati isto.
 
-   Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću.
+  Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću.
 
 Kada se igrica završi pritiskom na (r) igrica se ponovo pokreće a na (q) se prekida sa radom.
-
+                                  
 
 
 Jezici i tehnologije korišćene u izradi
@@ -60,5 +60,3 @@ Autori
 
 * Marko Popović
     popsgljb@gmail.com
-
-
