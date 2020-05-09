@@ -46,7 +46,7 @@ Pored moudla obradjenih fakultetskim kursevima upotrebljivani su i moduli: pygam
 
 Pokretanje
 ----------
-
+Izvršni fajl je napravljen za operativni sistem Windows.
 
 
 Autori
