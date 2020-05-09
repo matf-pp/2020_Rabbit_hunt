@@ -48,6 +48,8 @@ Pokretanje
 ----------
 Izvršni fajl je napravljen za operativni sistem Windows.
 
+Potrebno je preuzeti RabbitHunt.exe iz sekcije releases. 
+
 
 Autori
 -------
