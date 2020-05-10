@@ -40,9 +40,9 @@ Kada se igrica završi pritiskom na (r) igrica se ponovo pokreće a na (q) se pr
 
 Jezici i tehnologije korišćene u izradi
 ---------------------------------------
-Program je napisan u jeziku Python3.
+Program je napisan u jeziku Python3, a od okruženja su korišćeni Visual Studio Code i PyCharm.
 
-Pored moudla obradjenih fakultetskim kursevima upotrebljivani su i moduli: pygame, heapq, collections.
+Za vizelizaciju korišćen je modul pygame, a osim toga korišćeni su i moduli heapq, collections i numpy. 
 
 Pokretanje
 ----------
