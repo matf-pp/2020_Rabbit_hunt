@@ -48,7 +48,7 @@ Pokretanje
 ----------
 Izvršni fajl je napravljen za operativni sistem Windows.
 
-Potrebno je preuzeti RabbitHunt.exe iz sekcije releases. 
+Potrebno je preuzeti RabbitHunt.exe iz sekcije releases. Pokretanjem RabbitHunt.exe fajla u izabranom folderu kreiraće se novi folder pod nazivom RabbiitHunt. Unutar tog foldera dostupna je simulacija. 
 
 
 Autori
