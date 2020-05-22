@@ -35,7 +35,16 @@ Klikom na odgovarajuće dugme, moguće je:
   Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću.
 
 Kada se igrica završi pritiskom na (r) igrica se ponovo pokreće a na (q) se prekida sa radom.
+
                                   
+Algoritam
+-----------------
+
+Za početak, objasnimo kada se lisica i zec vide i na koji način lisica juri zeca. Matematički formalno, lisica i zec se vide ukoliko duž koja spaja središta polja na kojima se oni nalaze ne seče unutrašnjost ni jednog polja na kom se nalazi žbun. Na početku igre, lisica i zec se postavljaju tako da se vide i da su na razdaljini 7. Razlog zbog kog se uvek vide na početku igre je zbog toga što mislimo da je simulacija interesantnija, a razdaljina je izabrana uz jedini neophodan kriterijum da bude neparna.
+
+Ukoliko lisica vidi zeca, lisica traži najkraći put do tog polja na kome nema žbunja, i u većini situacija bira da napravi korak koji odgovara tom putu. Ako ga ipak ne vidi, ona traži put do polja gde je poslednji put videla zeca. Ovaj put je tražen koristeći algoritmom A* pri čemu je korišćena heuristika Euklidsko rastojanje. Primetimo da lisici dajemo prednost, jer joj na neki način dozvoljavamo da zna kako izgleda raspored žbunja. U malom broju situacija, preciznije u 10%, lisica pravi nasumičan korak. Moglo bi se postaviti pitanje zašto ovo lisica neadi u baš svim situacijama. Ispostavlja se da ova nepredvidivost može zbuniti zeca u odredjenim situacijama.
+
+Zec u svakom trenutku bira polje na koje će preći. D
 
 
 Jezici i tehnologije korišćene u izradi
