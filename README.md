@@ -37,7 +37,7 @@ Klikom na odgovarajuće dugme, moguće je:
 Kada se igrica završi pritiskom na (r) igrica se ponovo pokreće a na (q) se prekida sa radom.
 
                                   
-Algoritam
+Duži opis igre
 -----------------
 
 Za početak, objasnimo preciznije kako igra funkcioniše. Lisica i zec se kreću po tabeli dimenzija 25x25. Na toj tabeli se nalazi 60 žbunja, koje predstavlja prepreke. Lisica i zec naizmenično prave korake, pri čemu lisica pravi prvi korak. Korak znači pomeraj za jedno polje gore, dole, levo ili desno. Dakle, nema dijagonalnih koraka. Na početku igre, pozicije lisice i zeca se biraju nasumično, ali tako da su uvek na razdaljini 7 i tako da se vide. Definišimo sada šta znači to da se lisica i zec vide. Matematički formalno, lisica i zec se vide ukoliko duž koja spaja središta polja na kojima se oni nalaze ne seče unutrašnjost ni jednog polja na kom se nalazi žbun. Razlog zbog kog se uvek vide na početku igre je zbog toga što mislimo da je simulacija interesantnija, a razdaljina je izabrana uz jedini neophodan kriterijum da bude neparna, uzimajući u obzir da lisica igra prva.
