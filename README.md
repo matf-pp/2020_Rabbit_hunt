@@ -32,7 +32,7 @@ Klikom na odgovarajuće dugme, moguće je:
 
 * ![](images/replay.png)  Vratiti se korak u nazad. Vraćanjem u nazad, igra se ne mora nužno odvijati isto.
 
-  Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću.
+  Takođe je moguće i podešavati brzinu kojom se lisica i zec kreću. Brzina simulacije naravno ne utiče na sam ishod.
 
 Kada se igrica završi pritiskom na (r) igrica se ponovo pokreće a na (q) se prekida sa radom.
 
@@ -47,13 +47,31 @@ Prilikom testiranja primetili smo zanimljivu stvar. Za relativno male promene gu
   <img width="261" height="253"  src= images/br_zbunova3D.png>
 </p>
 
+<p align="center">
+ x osa predstavlja broj žbunova  
+</p>
+
+
 
 U zavisnosti od početne razdaljine lisice i zeca verovatnoća sa kojom zec pobeđuje se takođe neznatno menja. No, ono što se menja je broj partija u kojima zec pogine na samom početku. Pri maloj udaljenosti lisice i zeca dešava se da, ma koliko naš zec pametan bio prosto dolazi do neminovnog kraja. Sledeći dijagram upravo to i demonstrira :
+
+<p align="center">
+  <img width="261" height="253"  src= images/statistika2.png>
+</p>
+
+<p align="center">
+ x osa predstavlja početnu udaljenost lisice i zeca
+</p>
 
 
 
 
 Predstavimo sada kako se kreće lisica. Ukoliko lisica vidi zeca, lisica traži najkraći put do tog polja na kome nema žbunja, i u većini situacija bira da napravi korak koji odgovara tom putu. Ako ga ipak ne vidi, ona traži put do polja gde je poslednji put videla zeca. Ovaj put je tražen koristeći algoritmom A* pri čemu je korišćena heuristika Euklidsko rastojanje. Primetimo da lisici dajemo prednost, jer joj na neki način dozvoljavamo da zna kako izgleda raspored žbunja. U malom broju situacija, preciznije u 1%, lisica pravi nasumičan korak. Moglo bi se postaviti pitanje zašto ovo lisica ne radi u baš svim situacijama. Ispostavlja se da ova nepredvidivost može zbuniti zeca u odredjenim situacijama.
+
+Pre opisa algoritma po kojem se zec kreće, napomenimo da mu ovaj algoritam značajno povećava šanse za pobedu. Naime, prilikom pokretanja programa 10 000 puta pri nasumičnom kretanju zec nijednom nije uspeo da pobedi, a medijana broja koraka sa kojim se igra završava je 8. 
+
+Primenom algoritma koji sledi šanse zeca da dođe do pobede su oko 42% dok je medijana broja koraka sa kojim se igra završava 154. 
+
 
 Zec u svakom trenutku bira polje na koje će preći. Postoje polja koja ne dolaze u obzir - polja na kojima je žbunje, polja koja su na udaljenosti 1 od lisice ili koja su ćorsokak. Od preostalih polja, zec bira jedno, nazovimo ga potencijalno polje, na osnovu sledećih faktora:
 1) udaljenost potencijalnog polja od lisice
@@ -63,7 +81,11 @@ Zec u svakom trenutku bira polje na koje će preći. Postoje polja koja ne dolaz
 5) da li je potencijalno polje vidljivo sa polja gde je lisica trenutno
 Ostali smo još dužni da objasnimo šta je dobro žbunje. Žbunje je dobro ukoliko se može zaobići, odnosno ukoliko postoji putanja oko tog žbunja. Formalno matematički, žbun nije dobar ako se graniči sa ivicom tabele, ili ako ima zajedničku tačku sa nekim drugim žbunom koji nije dobar. Dakle, na osnovu prethodno navedenih faktora, računa se cena polja, i bira se polje sa najmanjom cenom.
 
-Nakon brojnih testiranja zaključci su sledeći...
+Pitanje je: koliko je svaki od ovih faktora bitan u proceni kretanja zeca?
+
+Nakon brojnih testiranja zaključci su sledeći:
+
+Zec postiže najbolje rezultate kada pri donošenju odluke o sledećoj poziciji favorizuje izbegavanje kretanje po samim obodima table u odnosu na ostale faktore.
 
 
 Jezici i tehnologije korišćene u izradi
