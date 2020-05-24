@@ -79,13 +79,12 @@ Zec u svakom trenutku bira polje na koje će preći. Postoje polja koja ne dolaz
 3) broj "dobrog" žbunja koje je bliže potencijalnom polju, nego lisici
 4) broj žbunja s kojim se graniči potencijalno polje
 5) da li je potencijalno polje vidljivo sa polja gde je lisica trenutno
+
 Ostali smo još dužni da objasnimo šta je dobro žbunje. Žbunje je dobro ukoliko se može zaobići, odnosno ukoliko postoji putanja oko tog žbunja. Formalno matematički, žbun nije dobar ako se graniči sa ivicom tabele, ili ako ima zajedničku tačku sa nekim drugim žbunom koji nije dobar. Dakle, na osnovu prethodno navedenih faktora, računa se cena polja, i bira se polje sa najmanjom cenom.
 
 Pitanje je: koliko je svaki od ovih faktora bitan u proceni kretanja zeca?
 
-Nakon brojnih testiranja zaključci su sledeći:
-
-Zec postiže najbolje rezultate kada pri donošenju odluke o sledećoj poziciji favorizuje izbegavanje kretanje po samim obodima table u odnosu na ostale faktore.
+Nakon brojnih testiranja zaključak je sledeći: zec postiže najbolje rezultate kada pri donošenju odluke o sledećoj poziciji favorizuje izbegavanje kretanje po samim obodima table u odnosu na ostale faktore.
 
 
 Jezici i tehnologije korišćene u izradi
