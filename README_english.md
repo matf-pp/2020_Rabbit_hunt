@@ -16,7 +16,7 @@ You are the rabbit.
 
 
 <p align="center">
-  <i  src= images/rabbithunt_english.png>
+  <i  src= rabbithunt_english.png>
 </p>
 
 <p align="center">
