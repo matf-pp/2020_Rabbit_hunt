@@ -52,19 +52,21 @@ Longer description of the game
 Let's explain more precisely how the game works. The fox and the rabbit move on a grid measure 25x25. There are 60 bushes on that table, which are obstacles. The fox and the rabbit take turns, with the fox taking the first step. Step means move one field up, down, left or right. So there are no diagonal steps. At the beginning of the game, the positions of the fox and the rabbit are chosen at random, but so that they are always at a distance of 7 and so that they can be seen. Let's define now what it means that fox and a rabbit can see each other. Mathematically speaking a fox and a rabbit can see each other if the line that connects the centers of the fields where they are located does not cut the inside of any field where the bush is located. The reason they are always seen at the beginning of the game is because we think the simulation is more interesting, and the distance was chosen with the only necessary criterion to be odd, considering that the fox plays first.
 
 During testing, we noticed an interesting thing. For relatively small changes in the density of bushes, the probability that the rabbit wins changes slightly, but in extreme cases there are large changes unfavorable for the rabbit. This is shown in the following histogram:
-<p align = "center">
-  <img width = "261" height = "253" src = images / br_zbunova3D.png>
+
+<p align="center">
+  <img width="261" height="253"  src= images/br_zbunova3D.png>
 </p>
 
-<p align = "center">
- x axis represents the number of bushes
+<p align="center">
+  x axis represents the number of bushes
 </p>
+
 
 
 Depending on the initial distance between the fox and the rabbit, the probability that the rabbit wins also changes slightly. But what is changing is the number of parties in which the rabbit dies at the very beginning. With a small distance between a fox and a rabbit, it happens that, no matter how smart our rabbit was, it simply comes to an inevitable end. The following diagram demonstrates just that:
 
 <p align = "center">
-  < img width = "261" height = "253" src = images / statistika2.png>
+  < img width = "261" height = "253" src = images/statistika2.png>
 </p>
 
 Let's discuss now how does the fox move. If the fox sees a rabbit, the fox looks for the shortest path to the field where the rabbit is and in most situations fox chooses to take a step that suits that path. If she still doesn't see him, she looks for a path to the field where the rabbit was last seen. This path was searched using the A * algorithm using the Euclidean distance heuristic. We also wanted to make a smart fox so with a probability of 1% the fox makes a random step. It turns out that this unpredictability can confuse rabbit in certain situations.
@@ -110,23 +112,4 @@ Authors
 
 * Marko Popović
     popsgljb@gmail.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
