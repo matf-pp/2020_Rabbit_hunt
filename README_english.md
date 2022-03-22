@@ -15,14 +15,14 @@ You are the rabbit.
 
 Something like this:
 
-
 <p align="center">
-  <i  src= rabbithunt_english.png>
+  <img width="498" height="607"  src= images/pocetna.png>
 </p>
 
 <p align="center">
- The orange triangle represents the fox, the small brown dot is the rabbit, and the green blobs are bushes.
+  The orange triangle represents the fox, the small brown dot is the rabbit, and the green squares are bushes.
 </p>
+
 
 
 Our task was to make the rabbit as smart as possible, that is, to come up with an algorithm which helps the rabbit win the game as often as possible.
