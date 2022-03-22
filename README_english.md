@@ -65,9 +65,17 @@ During testing, we noticed an interesting thing. For relatively small changes in
 
 Depending on the initial distance between the fox and the rabbit, the probability that the rabbit wins also changes slightly. But what is changing is the number of parties in which the rabbit dies at the very beginning. With a small distance between a fox and a rabbit, it happens that, no matter how smart our rabbit was, it simply comes to an inevitable end. The following diagram demonstrates just that:
 
-<p align = "center">
-  < img width = "261" height = "253" src = images/statistika2.png>
+
+<p align="center">
+  <img width="261" height="253"  src= images/statistika2.png>
 </p>
+
+<p align="center">
+ x axis represents initial distance between the fox and the rabbit
+</p>
+
+
+
 
 Let's discuss now how does the fox move. If the fox sees a rabbit, the fox looks for the shortest path to the field where the rabbit is and in most situations fox chooses to take a step that suits that path. If she still doesn't see him, she looks for a path to the field where the rabbit was last seen. This path was searched using the A * algorithm using the Euclidean distance heuristic. We also wanted to make a smart fox so with a probability of 1% the fox makes a random step. It turns out that this unpredictability can confuse rabbit in certain situations.
 
