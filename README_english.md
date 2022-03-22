@@ -14,6 +14,15 @@ catch the rabbit; the rabbit tries to get away from the fox. If the fox can catc
 You are the rabbit.
 
 
+<p align="center">
+  <img width="498" height="607"  src= images/pocetna.png>
+</p>
+
+<p align="center">
+ Lisica je narandžasti trouglić dok je zec beli kvadratić
+</p>
+
+
 
 <p align="center">
   <i  src= rabbithunt_english.png>
