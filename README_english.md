@@ -7,20 +7,19 @@ Short game description
 
 Here's the story:
 A fox is hunting a rabbit in a field. The field contains a number of bushes which obstruct both the
-fox's view and the rabbit's view, so each may or may not be able to see the other. The fox tries to
-catch the rabbit; the rabbit tries to get away from the fox. If the fox can catch the rabbit, he eats it
+fox's view and the rabbit's view, so each may or may not be able to see the other. Nor rabbit nor the fox can stand on a field where the bush is. The fox tries to catch the rabbit; the rabbit tries to get away from the fox. If the fox can catch the rabbit, she eats him
 (and wins). If the rabbit can keep away from the fox for 100 turns, the rabbit wins.
 
 You are the rabbit.
 
-Something like this:
+Animation looks something like this:
 
 <p align="center">
   <img width="498" height="607"  src= images/pocetna.png>
 </p>
 
 <p align="center">
-  The orange triangle represents the fox, the small brown dot is the rabbit, and the green squares are bushes.
+  The orange triangle represents the fox, white square is the rabbit, and the green squares are bushes.
 </p>
 
 
@@ -63,7 +62,7 @@ During testing, we noticed an interesting thing. For relatively small changes in
 
 
 
-Depending on the initial distance between the fox and the rabbit, the probability that the rabbit wins also changes slightly. But what is changing is the number of parties in which the rabbit dies at the very beginning. With a small distance between a fox and a rabbit, it happens that, no matter how smart our rabbit was, it simply comes to an inevitable end. The following diagram demonstrates just that:
+Depending on the initial distance between the fox and the rabbit, the probability that the rabbit wins also changes slightly. But what is changing is the frequency that the rabbit dies at the very beginning. With a small distance between a fox and a rabbit, it happens that, no matter how smart our rabbit is, it simply comes to an inevitable end. The following diagram demonstrates just that:
 
 
 <p align="center">
@@ -77,9 +76,9 @@ Depending on the initial distance between the fox and the rabbit, the probabilit
 
 
 
-Let's discuss now how does the fox move. If the fox sees a rabbit, the fox looks for the shortest path to the field where the rabbit is and in most situations fox chooses to take a step that suits that path. If she still doesn't see him, she looks for a path to the field where the rabbit was last seen. This path was searched using the A * algorithm using the Euclidean distance heuristic. We also wanted to make a smart fox so with a probability of 1% the fox makes a random step. It turns out that this unpredictability can confuse rabbit in certain situations.
+Let's discuss now how does the fox move. If the fox sees a rabbit, the fox looks for the shortest path to the field where the rabbit is and in most situations fox chooses to take a step that suits that path. If she still doesn't see him, she looks for a path to the field where the rabbit was last seen. This path was searched using the A \* algorithm using the Euclidean distance heuristic. We also wanted to make a smart fox so with a probability of 1% the fox makes a random step. It turns out that this unpredictability can confuse rabbit in certain situations.
 
-Before describing the algorithm by which the rabbit moves, let us note that this algorithm significantly increases its chances of winning. Namely, when starting the program 1000 times at random movement, the rabbit never managed to win, and the median number of steps with which the game ends is 8.
+Before describing the algorithm by which the rabbit moves, let us note that this algorithm significantly increases its chances of winning.When starting the program 1000 times at random movement(withouth this algorithm), the rabbit never managed to win, and the median number of steps with which the game ends is 8.
 
 Using algorithm that follows the rabbit's chances of winning are about 42%, while the median number of steps with which the game ends is 154.
 
