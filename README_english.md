@@ -30,7 +30,7 @@ Our task was to make the rabbit as smart as possible, that is, to come up with a
 By clicking on the appropriate button, it is possible to:
 
 
-* ![](images/run.png)  Pokrenuti animaciju.
+* ![](images/run.png)  Run animation.
 
 * ![](images/stop.png) Pause animation.
 
@@ -107,7 +107,7 @@ Launching
 ----------
 The executable file was created for Windows operating system.
 
-Download RabbitHunt.exe from the releases section. Running the RabbitHunt.exe file in the selected folder will create a new folder named RabbiitHunt. A simulation is available within this folder.
+Download RabbitHunt.exe from the releases section. Running the RabbitHunt.exe file in the selected folder will create a new folder named RabbitHunt. A simulation is available within this folder.
 
 
 Authors
